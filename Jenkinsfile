@@ -9,7 +9,7 @@ pipeline {
                 )
             }
         }
-        stage("Running Maven Clean and Install") {
+        stage("Running Maven build") {
             steps {
                 sh 'mvn clean install -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true'
             }
