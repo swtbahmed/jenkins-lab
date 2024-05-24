@@ -16,7 +16,7 @@ pipeline {
         }
         stage("Running SonarQube Analysis") {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dmaven.wagon.http.ssl.ignore.validity.dates=true -Dsonar.host.url=https://sonarqube-cumulus-tools.apps.openshift.sys.onetech-group.corp/ -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
+                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true -Dsonar.host.url=https://sonarqube-cumulus-tools.apps.openshift.sys.onetech-group.corp/ -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
             }
         }
     }
