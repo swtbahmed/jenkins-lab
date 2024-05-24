@@ -4,9 +4,8 @@ pipeline {
         stage("Clone Git Repository") {
             steps {
                 git(
-                    url: "https://tbswahmed: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@github.com/tbswahmed/jenkins-lab-spring.git",
-                    branch: "main",
-                    credentialsId: "github-credentials"
+                    url: "https://swtbahmed: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@github.com/swtbahmed/jenkins-lab.git",
+                    branch: "main"
                 )
             }
         }
