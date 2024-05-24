@@ -16,7 +16,7 @@ pipeline {
         }
         stage("Running SonarQube Analysis") {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.projectKey=jenkins-lab -Dsonar.host.url=http://10.112.61.88:9000/ -Dsonar.login=squ_a6a2b2e68ddc590d1a0d5d6e46644a975b4f848f'
+                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dsonar.host.url=https://sonarqube-cumulus-tools.apps.openshift.sys.onetech-group.corp/ -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
             }
         }
     }
