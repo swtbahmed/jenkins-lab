@@ -19,18 +19,11 @@ pipeline {
                 sh 'mvn package'
             }
         }
-        stage("build & SonarQube analysis") {
-            agent any
+ 
+        stage("Running SonarQube Analysis") {
             steps {
-              withSonarQubeEnv('sonar') {
-                sh 'mvn clean package sonar:sonar'
-              }
+                sh 'mvn sonar:sonar  -Dsonar.host.url=http://10.112.61.88:9000  -Dsonar.login=squ_64436e81d074e7e5c223cfee62539e6a6b28f3ad'
             }
-          }
-#        stage("Running SonarQube Analysis") {
-#            steps {
-#                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dsonar.host.url=http://10.112.61.88:9000  -Dmaven.wagon.http.ssl.insecure=true -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
-#            }
-#        }
+        }
     }
 }
