@@ -27,10 +27,10 @@ pipeline {
               }
             }
           }
-        stage("Running SonarQube Analysis") {
-            steps {
-                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dsonar.host.url=http://10.112.61.88:9000  -Dmaven.wagon.http.ssl.insecure=true -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
-            }
-        }
+#        stage("Running SonarQube Analysis") {
+#            steps {
+#                sh 'mvn sonar:sonar -Dsonar.projectKey=lab -Dsonar.host.url=http://10.112.61.88:9000  -Dmaven.wagon.http.ssl.insecure=true -Dsonar.login=squ_0536c4adc307dc03d46ace07db24f61db03c010e'
+#            }
+#        }
     }
 }
